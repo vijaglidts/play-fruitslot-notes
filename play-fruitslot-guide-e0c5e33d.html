@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资料索引：水果机玩法与演变</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            background-color: #f5f3ef;
+            color: #2c2b28;
+            line-height: 1.6;
+        }
+
+        /* ——— 深色头图 ——— */
+        .hero {
+            background: radial-gradient(ellipse at 20% 40%, #1f3a2f, #0e1d16);
+            min-height: 42vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 6px solid #c8a96e;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 350;
+            letter-spacing: 6px;
+            color: #ebdfc9;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            margin-bottom: 0.4rem;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #b8a989;
+            max-width: 640px;
+            margin: 0.6rem auto 0;
+            border-top: 1px solid #3b5a48;
+            padding-top: 1rem;
+            font-style: italic;
+        }
+
+        /* ——— 浅色正文区 ——— */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.8rem 2rem 4rem;
+        }
+
+        .section-card {
+            background: #ffffff;
+            border-radius: 28px 8px 28px 8px;
+            padding: 2.4rem 2rem;
+            margin-bottom: 2.6rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+            transition: box-shadow 0.2s;
+        }
+
+        .section-card:hover {
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.07);
+        }
+
+        .section-card h2 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #1f3a2f;
+            border-left: 6px solid #c8a96e;
+            padding-left: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .section-card p {
+            margin-bottom: 1.1rem;
+            font-size: 1rem;
+            color: #3a3a37;
+        }
+
+        .section-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.6rem;
+            margin: 1.6rem 0 0.4rem;
+        }
+
+        .feature-item {
+            background: #f8f6f1;
+            padding: 1.2rem 1.2rem 1.2rem 1.8rem;
+            border-radius: 18px 4px 18px 4px;
+            border-left: 3px solid #b58d5a;
+        }
+
+        .feature-item strong {
+            display: block;
+            font-weight: 500;
+            color: #1f3a2f;
+            margin-bottom: 0.25rem;
+        }
+
+        .feature-item span {
+            font-size: 0.95rem;
+            color: #4f4d48;
+        }
+
+        .faq-mini {
+            background: #f0ede7;
+            border-radius: 24px 8px 24px 8px;
+            padding: 1.6rem 2rem;
+            margin: 2.4rem 0 1.2rem;
+        }
+
+        .faq-mini summary {
+            font-weight: 500;
+            color: #1f3a2f;
+            cursor: pointer;
+            padding: 0.3rem 0;
+            font-size: 1.05rem;
+        }
+
+        .faq-mini p {
+            margin-top: 0.6rem;
+            color: #3f3e3a;
+            font-size: 0.95rem;
+        }
+
+        /* ——— 强调色链接 ——— */
+        a {
+            color: #a57c44;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            transition: color 0.15s, background 0.15s;
+        }
+
+        a:hover {
+            color: #1f3a2f;
+            background: #e7dbc8;
+            text-decoration: none;
+            border-radius: 2px;
+        }
+
+        /* ——— 页尾 ——— */
+        .footer-note {
+            text-align: center;
+            border-top: 1px solid #d9d2c6;
+            padding: 2.4rem 1rem 1.8rem;
+            margin-top: 1.8rem;
+            color: #6b6862;
+            font-size: 0.95rem;
+        }
+
+        .footer-note a {
+            color: #a57c44;
+        }
+
+        .footer-note a:hover {
+            background: #ede4d6;
+        }
+
+        /* ——— 响应式 ——— */
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 2rem;
+                letter-spacing: 3px;
+            }
+            .hero .sub {
+                font-size: 0.95rem;
+            }
+            .container {
+                padding: 1.6rem 1.2rem 3rem;
+            }
+            .section-card {
+                padding: 1.6rem 1.2rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .faq-mini {
+                padding: 1.2rem 1.2rem;
+            }
+        }
+
+        @media (max-width: 460px) {
+            .hero {
+                min-height: 30vh;
+                padding: 2rem 1rem;
+            }
+            .hero h1 {
+                font-size: 1.6rem;
+                letter-spacing: 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 深色头图 -->
+    <header class="hero">
+        <h1>资料整理 · 水果机</h1>
+        <div class="sub">从经典转盘到现代数字索引 · 玩法脉络与背景梳理</div>
+    </header>
+
+    <!-- 浅色正文区 -->
+    <main class="container">
+
+        <!-- 背景说明 -->
+        <section class="section-card">
+            <h2>背景与源头</h2>
+            <p>「水果机」作为一种符号化老虎机的通俗称呼，最早可追溯至20世纪初的机械转盘机。早期机器以水果图案作为赔付符号——樱桃、柠檬、橙子、西瓜等——因其辨识度高且色彩鲜明，逐渐成为街机厅与酒吧的常见娱乐终端。从机械拨杆到电子显示，<strong>这一品类始终保留着水果符号作为核心视觉元素</strong>，形成了一种跨文化、跨世代的记忆锚点。在资料整理过程中，我们发现关于水果机的规则变体、概率设定以及主题版本存在大量零散记录，值得系统性梳理。</p>
+        </section>
+
+        <!-- 三段自然介绍 + 卡片特点 -->
+        <section class="section-card">
+            <h2>玩法演变与信息索引</h2>
+            <p>不同时期的水果机在交互逻辑上各有侧重：早期机械机依靠纯物理弹簧与棘轮决定停转位置，玩家只能拉动侧杆；电子化之后，随机数发生器（RNG）成为核心，屏幕上的水果图案仅是结果的表现层。从信息索引角度来看，<strong>当代水果机主要分为三类</strong>：经典单线机、多线奖励机以及结合主题剧情的复合机。每一类在赔率表、特殊符号（例如百搭、散列）和奖励轮换机制上都有各自的参数集。整理时建议从“符号列表”“赔付线结构”“奖励触发条件”三个维度建立档案。</p>
+
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <strong>符号档案</strong>
+                    <span>常见水果图标：樱桃、柠檬、橙子、李子、西瓜、铃铛、7。不同组合对应不同倍率，部分版本加入星标或金币。</span>
+                </div>
+                <div class="feature-item">
+                    <strong>赔付线结构</strong>
+                    <span>从单线到243路甚至1024路，赔付线数量直接影响中奖概率与波动性，是区分机台风格的重要参数。</span>
+                </div>
+                <div class="feature-item">
+                    <strong>奖励机制</strong>
+                    <span>自由落体、二次旋转、累积奖池、免费旋转等设计，让水果机在基础符号之外有了更多层次。</span>
+                </div>
+                <div class="feature-item">
+                    <strong>主题变体</strong>
+                    <span>热带水果、复古水果、霓虹水果、水果派对……主题决定了美术风格与音效，也影响特定玩家群体。</span>
+                </div>
+            </div>
+
+            <p style="margin-top:1.6rem;">在整理过程中可以参考公开的机台说明书、历史论坛讨论以及模拟器文档，这些来源能提供较可靠的参数快照。特别提醒：不同国家或地区对水果机的归类标准存在细微差异（例如英国分类中的「Fruit machine」与澳洲的「Pokies」），跨区域对比时需留意术语偏差。</p>
+        </section>
+
+        <!-- 场景与实用提示 -->
+        <section class="section-card">
+            <h2>场景与检索建议</h2>
+            <p>对于研究游戏史或机械彩票演变的资料整理者来说，<a href="https://play-fruitslot.com">水果机</a>是一个很好的切入点：它既是实体文化遗产（部分经典机型已进入收藏领域），又是数字娱乐中极为稳定的品类之一。在检索时建议使用组合关键词，例如“fruit machine payout table 1990s”“经典水果机 赔率表 符号 设计图”，往往能找到扫描件或技术手册。此外，模拟器站点常常保留原始RNG逻辑说明，有助于理解概率分配方式。如果你是开发者或设计师，分析不同水果机的界面布局与颜色编码（例如红色高赔水果、绿色低赔水果）也能获得产品层面的启发。</p>
+
+            <p style="margin-top:1rem;">一个值得注意的细节：许多现代数字版水果机保留了经典三转轮样式，但内部使用了多层虚拟转盘映射，使得玩家看到的画面与实际概率分布并非一一对应——这种“视觉隐喻”是资料整理中容易忽略却非常重要的一环。</p>
+        </section>
+
+        <!-- FAQ 摘要 -->
+        <div class="faq-mini">
+            <details>
+                <summary>资料整理常见问题 · 摘要</summary>
+                <p><strong>Q：哪些渠道可以获得原始规则文件？</strong> 部分老机台的说明书扫描件存在于英国游戏档案协会（BAGA）以及民间收藏网站，版权限制请注意。对于2000年后的电子机，开发商官网或归档PDF是主要来源。<br>
+                <strong>Q：水果机与老虎机在术语上完全等同吗？</strong> 并非完全等同。在英式用法中，Fruit machine 特指使用水果符号且无“拉杆”造型的落地机型；美式 Slot machine 涵盖范围更广。但在亚洲语境下，“水果机”常被泛化使用。<br>
+                <strong>Q：整理时如何标记版本差异？</strong> 建议为每台机台建立ID字段，包含：名称/开发商/年份/符号数/赔付线数/是否有累积奖池/物理或数字形态。使用电子表格或Notion数据库均可。</p>
+            </details>
+        </div>
+
+    </main>
+
+    <!-- 页尾访问提示 -->
+    <footer class="footer-note">
+        <p>本页为资料索引页。若需浏览当前可查阅的在线水果机主题界面与演示，可访问 <a href="https://play-fruitslot.com">水果机</a> 。</p>
+        <p style="margin-top:0.8rem; font-size:0.85rem; color:#8e8a83;">整理范围涵盖基础规则、符号演变与界面资料 · 持续更新中</p>
+    </footer>
+
+</body>
+</html>
